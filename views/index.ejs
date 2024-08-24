@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>サンプル建設株式会社</title>
+
+    <!-- public配下を読み込む -->
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+    rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <header class="header">
+    <div class="header__inner header-flex-container">
+        <h1 class="header-logo"><a href="#">サンプル建設株式会社</a></h1>
+        <nav class="header-nav">
+        <ul class="header-nav__list">
+            <li class="header-nav__item">
+            <a href="#" class="header-nav__link">会社概要</a>
+            </li>
+            <li class="header-nav__item">
+            <a href="#" class="header-nav__link">事業内容</a>
+            </li>
+            <li class="header-nav__item">
+            <a href="#" class="header-nav__link">CSR</a>
+            </li>
+            <li class="header-nav__item">
+            <a href="#" class="header-nav__link">採用情報</a>
+            </li>
+            <li class="header-nav__item header-nav__item header-nav__button">
+            <a href="#" class="header-nav__link"
+                ><img src="/img/icon-mail-white.svg" alt="" />お問い合わせ</a
+            >
+            </li>
+        </ul>
+        </nav>
+    </div>
+    </header>
+
+    <main class="main">
+    <!-- ファーストビュー -->
+    <div class="fv">
+        <div class="fv__img">
+        <img
+            src="/img/photo-fv.jpg"
+            alt="工事現場で現場監督が床に広げた設計図を見ながら現場を確認しています"
+            width="1920"
+            height="837"
+        />
+        </div>
+        <div class="fv-text">
+        <strong
+            >未来へ続く<br />
+            安心の住まいづくり</strong
+        >
+        <p>
+            新築・リフォーム・増改築、<br />
+            あらゆる住まいのニーズに対応
+        </p>
+        <!-- テンプレートエンジンの特殊な書き方が以下の通り -->
+        <p style="color: red;"><%= text %></p>
+        </div>
+    </div>
+    </main>
+</body>
+</html>

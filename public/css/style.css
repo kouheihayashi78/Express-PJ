@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/**  
+* object-fit
+* 画像を綺麗にトリミング
+*/
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/**  
+* transition
+* 0.3秒かけてアニメーション
+*/
+a {
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/*------------------------------------------
+  ヘッダー
+-------------------------------------------*/
+.header__inner {
+  margin-left: 7%;
+}
+
+.header-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.header-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+}
+
+.header-nav__link {
+  font-weight: bold;
+}
+
+.header-nav__button {
+  color: #fff;
+  background-color: #f28066;
+}
+
+.header-nav__button .header-nav__link {
+  padding: 0 50px;
+  height: 80px;
+  line-height: 80px;
+  display: inline-block;
+}
+
+.header-nav__button .header-nav__link img {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/*------------------------------------------
+  メイン
+-------------------------------------------*/
+.fv {
+  position: relative;
+}
+
+/*＊
+* calc関数 
+* CSSで計算ができるようになる関数
+* calc((デザインのleft / コンテンツの幅) * 100);
+*/
+.fv-text {
+  position: absolute;
+  top: calc((166 / 1440) * 100%);
+  left: calc((167 / 1440) * 100%);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 
+* 文字サイズ ジェネレーター
+* https://min-max-calculator.9elements.com/
+* min 320px max 1920pxとして算出
+*/
+/**
+* calc(( margin-bottom / font-size ) * 1em)
+* = 1.142857em
+* フォントサイズに対するマージンボトムの相対サイズを表す。
+*/
+.fv-text strong {
+  display: block;
+  font-size: clamp(2.331rem, -0.002rem + 4.86vw, 5.831rem);
+
+  margin-bottom: calc((80 / 70) * 1em);
+  line-height: 1.3;
+}
+
+/* 
+* 文字サイズ ジェネレーター
+* https://min-max-calculator.9elements.com/
+* min 320px max 1920pxとして算出
+*/
+.fv-text p {
+  font-size: clamp(0.831rem, -0.002rem + 1.74vw, 2.081rem);
+  line-height: 1.75;
+}
+
+.fv__img {
+  width: 100%;
+  height: auto;
+}
